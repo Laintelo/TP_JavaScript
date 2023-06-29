@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application 2 - Sélection de langues</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="conteneur">
+    <form action="#" method="post">
+      <legend>Exemple 2: Sélection de langues</legend>
+      <label>
+        <input type="checkbox" name="langues" value="francais" onclick="verifierlangues()">Français 🇫🇷
+      </label>
+      <label>
+        <input type="checkbox" name="langues" value="anglais" onclick="verifierlangues()">Anglais 🇬🇧
+      </label>
+      <label>
+        <input type="checkbox" name="langues" value="espagnol" onclick="verifierlangues()">Espagnol 🇪🇸
+      </label>
+    </form>
+    <div id="resultat"></div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

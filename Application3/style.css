@@ -1,0 +1,51 @@
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Styles pour le body*/
+body{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styles pour le conteneur principal */
+.conteneur {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles pour la légende */
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styles pour les étiquettes des boutons radio */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Styles pour les boutons radio */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Styles pour le résultat */
+#resultat {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  background-color: chartreuse;
+  font-weight: bold;
+}

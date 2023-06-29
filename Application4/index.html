@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application 5 - Liste déroulante des années</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="conteneur">
+    <form action="#" method="post">
+      <legend>Exercice 4 - Liste déroulante des années</legend>
+      <label for="selectionannee">Sélectionnée une année: </label>
+      <select name="annee" id="selectionannee">
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+      </select>
+    </form>
+    <button onclick="CalculerDifference()">Calculer la différence</button>
+    <div id="resultat"></div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

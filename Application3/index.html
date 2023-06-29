@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application 3 - Sélection de civilité</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="conteneur">
+    <form action="#" method="post">
+      <legend>Application 3 - Sélection de civilité</legend>
+      <label>
+        <input type="radio" name="civilite" value="Mlle" onclick="obtenircivilite()"> Mlle
+      </label>
+      <label>
+        <input type="radio" name="civilite" value="Mme" onclick="obtenircivilite()"> Mme
+      </label>
+      <label>
+        <input type="radio" name="civilite" value="M" onclick="obtenircivilite()"> M
+      </label>
+    </form>
+  </div>
+  <div id="resultat"></div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,42 @@
+/* style.css */
+
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles pour le conteneur principal */
+.conteneur {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles pour le titre */
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Styles pour les étiquettes des champs de saisie */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Styles pour les champs de saisie */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+/* Styles pour le champ de saisie en surbrillance */
+#textAfficher {
+  background-color: yellow;
+}
