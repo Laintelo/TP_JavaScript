@@ -18,6 +18,13 @@ var CheckPrenom = false;
 var CheckTel = false;
 var CheckNat = false;
 
+// Variable de validation du genre
+var CheckGenre = false;
+
+// Récupérer les éléments des boutons radio
+var genreRadios = form.elements.genre;
+
+
 // Lier les évènements aux fontions de validation
 nomInput.addEventListener('input', function(){
     CheckNom = ValiderNom(nomInput.value);
@@ -35,9 +42,13 @@ natInput.addEventListener('input', function(){
     CheckNat = ValiderNat(natInput.value);
 })
 
-/*genreInput.addEventListener('input', function(){
-    Checkgenre = ValiderGenre(genreInput)
-})*/
+// Lier les évènements "change" aux fonctions de validation
+for (let i = 0; i < genreRadios.length; i++) {
+    genreRadios[i].addEventListener('change', function() {
+      CheckGenre = ValiderGenre();
+    });
+}
+
 
 var er_nom = document.getElementById("erreur-nom");
 function ValiderNom(nom){
@@ -110,29 +121,6 @@ function ValiderNat(nat){
     }
 }
 
-
-
-/*var er_genre = document.getElementById('erreur-genre');
-var genre = "";
-function ValiderGenre(tabGenre){
-    for(let i = 0; i < tabGenre.length; i++){
-        if (tabGenre[i].checked){
-        genre = tabGenre[i].value;
-        break;
-        }
-    }
-    if (genre === ""){
-        er_genre.innerHTML = "❌ Veuillez sélectionner votre genre !";
-        er_genre.style.color = "red";
-        return false;
-    }
-    else{
-        er_genre.innerHTML = "✅ Sélection valide.";
-        er_genre.style.color = "green";
-        return true;
-    }
-}*/
-
 function submitForm(event){
     event.preventDefault();
 
@@ -167,6 +155,12 @@ function submitForm(event){
         ligne.insertCell().textContent = natInput.value;
 
         form.reset();
+        CheckNom = false;
+        CheckPrenom = false;
+        CheckTel = false;
+        CheckNat = false;
+        CheckGenre = false;
+        
         er_nom.innerHTML = "";
         er_prenom.innerHTML = "";
         er_genre.innerHTML = "";
@@ -175,3 +169,18 @@ function submitForm(event){
         TableUtilisateurs.style.display = "table"; 
     }
 }
+
+var er_genre = document.getElementById('erreur-genre');
+function ValiderGenre() {
+  for (let i = 0; i < genreRadios.length; i++) {
+    if (genreRadios[i].checked) {
+      er_genre.innerHTML = "✅ Sélection valide.";
+      er_genre.style.color = "green";
+      return true;
+    }
+  }
+  er_genre.innerHTML = "❌ Veuillez sélectionner votre genre !";
+  er_genre.style.color = "red";
+  return false;
+}
+
